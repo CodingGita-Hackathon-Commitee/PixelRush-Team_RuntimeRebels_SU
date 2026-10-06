@@ -3,96 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choose Your Plan - TiffinFlow Tablet</title>
+  <title>TiffinFlow - Tablet Home</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .plans-tablet-grid {
+    .hero-tablet-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      padding: 32px 32px 40px;
+    }
+    .hero-image-wrap {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-float);
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .promise-tablet-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 32px;
+      gap: 16px;
+      margin-top: 16px;
     }
-    .plan-card {
-      background: var(--white);
-      border: 1.5px solid var(--border-color);
-      border-radius: 20px;
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.2s;
+    .menu-tablet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
-    .plan-card.popular {
-      border-color: var(--accent-orange);
-      box-shadow: 0 12px 32px rgba(239, 106, 50, 0.16);
-      transform: translateY(-4px);
-    }
-    .popular-tag {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent-orange);
-      color: var(--white);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      padding: 4px 14px;
-      border-radius: 999px;
-      box-shadow: 0 4px 10px rgba(239, 106, 50, 0.3);
-      white-space: nowrap;
-    }
-    .plan-features-list {
-      list-style: none;
-      border-top: 1px solid var(--border-light);
-      padding-top: 14px;
-      margin: 16px 0 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 12px;
-    }
-    .plan-feature-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .feature-check {
-      color: var(--primary-green-light);
-      font-weight: 800;
-      font-size: 13px;
-    }
-    .compare-table {
+    .tablet-card-img {
+      height: 140px;
       width: 100%;
-      border-collapse: collapse;
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-color);
-      font-size: 13px;
-    }
-    .compare-table th, .compare-table td {
-      padding: 12px 16px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .compare-table th:first-child, .compare-table td:first-child {
-      text-align: left;
-      font-weight: 700;
-      color: var(--primary-green);
-    }
-    .compare-table th {
-      background: var(--bg-cream);
-      font-weight: 800;
-      color: var(--primary-green);
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
   <div class="tablet-container">
-    <!-- Header -->
+    <!-- Top Tablet Navigation -->
     <header class="tablet-header">
       <a href="index.html" class="brand-logo">
         <span class="brand-icon">
@@ -105,140 +60,143 @@
       </a>
 
       <nav class="tablet-nav-links">
-        <a href="index.html" class="tablet-nav-link">Home</a>
+        <a href="index.html" class="tablet-nav-link active">Home</a>
         <a href="weekly-menu.html" class="tablet-nav-link">Menu</a>
-        <a href="plans.html" class="tablet-nav-link active">Plans</a>
+        <a href="plans.html" class="tablet-nav-link">Plans</a>
         <a href="subscription.html" class="tablet-nav-link">My Subscription</a>
         <a href="reviews.html" class="tablet-nav-link">Reviews</a>
       </nav>
 
-      <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
+      <div style="display: flex; gap: 10px;">
+        <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
+        <a href="signup.html" class="btn btn-sm btn-primary">Get Started</a>
+      </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="tablet-content">
-      <div style="margin-bottom: 24px; text-align: center;">
-        <span class="eyebrow">PLANS THAT ADAPT</span>
-        <h1 class="page-title">Choose your plan</h1>
-        <p class="page-subtitle" style="margin-bottom: 0;">Pick what fits your routine. Change it whenever life changes.</p>
-      </div>
+    <!-- Main Tablet Content -->
+    <main class="tablet-content no-padding">
+      <!-- Hero Section -->
+      <section class="hero-tablet-grid">
+        <div>
+          <span class="badge badge-orange" style="margin-bottom: 12px;">✨ Home-style • Reusable • Flexible</span>
+          <h1 class="page-title" style="font-size: 34px;">Good food shouldn't depend on your schedule.</h1>
+          <p class="page-subtitle" style="font-size: 15px; margin-bottom: 24px;">
+            Home-style meals, flexible plans and reusable stainless-steel tiffins — made for the way you live and work.
+          </p>
 
-      <!-- 3-Column Tablet Plans Grid -->
-      <div class="plans-tablet-grid">
-        <!-- Basic Plan -->
-        <div class="plan-card">
-          <div>
-            <span class="eyebrow" style="color: var(--primary-green-light);">Basic</span>
-            <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Best for trying TiffinFlow</div>
-            <div style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--primary-green); margin-bottom: 4px;">
-              ₹599 <span style="font-size: 13px; font-weight: 600; color: var(--text-muted);">/ 7 meals</span>
-            </div>
-
-            <ul class="plan-features-list">
-              <li class="plan-feature-item"><span class="feature-check">✓</span> 7 home-style meals</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Skip up to 2 meals</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Reusable steel tiffins</li>
-              <li class="plan-feature-item" style="color: var(--text-subtle);"><span style="color: var(--text-subtle);">—</span> Dish swapping</li>
-            </ul>
+          <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+            <a href="plans.html" class="btn btn-primary" style="width: auto;">Explore Plans</a>
+            <a href="weekly-menu.html" class="btn btn-secondary" style="width: auto;">View Weekly Menu</a>
           </div>
-          <a href="customize.html" class="btn btn-secondary">Choose Basic</a>
+
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text-muted);">
+            <span style="font-size: 16px; color: #EF6A32; font-weight: 800;">4.9 ★</span>
+            <span>Over 1,200 active daily meal subscribers in Bengaluru</span>
+          </div>
         </div>
 
-        <!-- Standard Flex Plan -->
-        <div class="plan-card popular">
-          <div class="popular-tag">MOST POPULAR</div>
-          <div>
-            <span class="eyebrow" style="color: var(--accent-orange-dark);">Standard Flex</span>
-            <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Made for flexible routines</div>
-            <div style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--accent-orange-dark); margin-bottom: 4px;">
-              ₹1,149 <span style="font-size: 13px; font-weight: 600; color: var(--text-muted);">/ 15 meals</span>
-            </div>
-
-            <ul class="plan-features-list">
-              <li class="plan-feature-item"><span class="feature-check">✓</span> 15 flexible meals</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Unlimited skips with credit rollover</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> 1-click dish swap</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Pause plan anytime</li>
-            </ul>
+        <div class="hero-image-wrap">
+          <img src="images/thali.png" alt="Indian home-style thali">
+          <div style="position: absolute; bottom: 14px; left: 14px; background: rgba(23, 53, 45, 0.9); backdrop-filter: blur(8px); color: white; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;">
+            Pure Home Taste • Zero Single-Use Plastic
           </div>
-          <a href="customize.html" class="btn btn-primary">Choose Standard</a>
+        </div>
+      </section>
+
+      <!-- Promises Section -->
+      <section style="padding: 32px; background: var(--bg-cream);">
+        <p class="eyebrow">THE TIFFINFLOW PROMISE</p>
+        <h2 class="section-title">Made for real life</h2>
+
+        <div class="promise-tablet-grid">
+          <div class="card" style="margin-bottom: 0;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: var(--primary-green-pale); color: var(--primary-green); display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-green); margin-bottom: 6px;">Home-style Cooking</h3>
+            <p style="font-size: 12px; color: var(--text-muted);">Balanced, low-oil, nutritious meals cooked fresh daily by verified neighborhood home cooks.</p>
+          </div>
+
+          <div class="card" style="margin-bottom: 0;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: var(--primary-green-pale); color: var(--primary-green); display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-green); margin-bottom: 6px;">Zero Waste Flexibility</h3>
+            <p style="font-size: 12px; color: var(--text-muted);">Skip any meal or pause your subscription before the cutoff. Unused credits roll over automatically.</p>
+          </div>
+
+          <div class="card" style="margin-bottom: 0;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: var(--primary-green-pale); color: var(--primary-green); display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path></svg>
+            </div>
+            <h3 style="font-size: 15px; font-weight: 700; color: var(--primary-green); margin-bottom: 6px;">Reusable Steel Tiffins</h3>
+            <p style="font-size: 12px; color: var(--text-muted);">Enjoy piping hot food in clean, stainless-steel containers. We collect the empty box the next day.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Menu Highlights -->
+      <section style="padding: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+          <div>
+            <p class="eyebrow">FRESH WEEKLY VARIETIES</p>
+            <h2 class="section-title" style="margin-bottom: 0;">This Week at TiffinFlow</h2>
+          </div>
+          <a href="weekly-menu.html" style="font-size: 13px; font-weight: 700; color: var(--accent-orange);">View Full Menu &rarr;</a>
         </div>
 
-        <!-- Premium Plan -->
-        <div class="plan-card">
-          <div>
-            <span class="eyebrow" style="color: var(--primary-green-light);">Premium</span>
-            <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Complete monthly comfort</div>
-            <div style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--primary-green); margin-bottom: 4px;">
-              ₹1,999 <span style="font-size: 13px; font-weight: 600; color: var(--text-muted);">/ 30 meals</span>
-            </div>
-
-            <ul class="plan-features-list">
-              <li class="plan-feature-item"><span class="feature-check">✓</span> 30 full meals for the month</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Unlimited skips & pause</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Priority delivery window</li>
-              <li class="plan-feature-item"><span class="feature-check">✓</span> Weekend special feast included</li>
-            </ul>
+        <div class="menu-tablet-grid">
+          <div class="card" style="padding: 14px; margin-bottom: 0;">
+            <img src="images/paneer-tikka.png" alt="Paneer Tikka Thali" class="tablet-card-img">
+            <span class="badge badge-green" style="margin-bottom: 6px;">Monday · Lunch</span>
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--primary-green);">Paneer Tikka Thali</h4>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Dal fry, 3 phulkas, jeera rice & fresh kachumber.</p>
           </div>
-          <a href="customize.html" class="btn btn-forest">Choose Premium</a>
-        </div>
-      </div>
 
-      <!-- Plan Feature Matrix -->
-      <div>
-        <h3 class="section-title" style="font-size: 18px;">Compare all plan features</h3>
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Basic (7 meals)</th>
-              <th>Standard Flex (15 meals)</th>
-              <th>Premium (30 meals)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Meal quantity</td>
-              <td>7</td>
-              <td>15</td>
-              <td>30</td>
-            </tr>
-            <tr>
-              <td>Skip meals</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-            </tr>
-            <tr>
-              <td>Swap dishes</td>
-              <td style="color: var(--text-subtle);">—</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-            </tr>
-            <tr>
-              <td>Pause subscription</td>
-              <td style="color: var(--text-subtle);">—</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-            </tr>
-            <tr>
-              <td>Reusable steel tiffins</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-              <td style="color: var(--success-green); font-weight: 800;">✓</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <div class="card" style="padding: 14px; margin-bottom: 0;">
+            <img src="images/rajma-rice.png" alt="Rajma Rice" class="tablet-card-img">
+            <span class="badge badge-green" style="margin-bottom: 6px;">Tuesday · Lunch</span>
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--primary-green);">Punjabi Rajma Rice</h4>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Slow-cooked Kashmiri rajma, basmati rice & mint curd.</p>
+          </div>
+
+          <div class="card" style="padding: 14px; margin-bottom: 0;">
+            <img src="images/gujarati-thali.png" alt="Gujarati Special Thali" class="tablet-card-img">
+            <span class="badge badge-green" style="margin-bottom: 6px;">Wednesday · Lunch</span>
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--primary-green);">Gujarati Special Thali</h4>
+            <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Sev tameta, kadhi khichdi, phulkas & masala chaas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kitchen Story Card -->
+      <section style="padding: 0 32px 32px;">
+        <div class="card card-forest" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; padding: 30px;">
+          <div>
+            <span class="eyebrow" style="color: #F8B087;">OUR KITCHENS</span>
+            <h3 style="font-family: var(--font-heading); font-size: 24px; font-weight: 800; margin-bottom: 12px; line-height: 1.25;">
+              Cooked with the feeling of home
+            </h3>
+            <p style="font-size: 13px; opacity: 0.9; line-height: 1.6; margin-bottom: 20px;">
+              From verified home kitchens to your desk, our meals are prepared by women who bring authentic regional care and wholesome familiarity to every single tiffin.
+            </p>
+            <a href="signup.html" class="btn btn-primary" style="width: auto;">Start My Subscription</a>
+          </div>
+          <div style="border-radius: 16px; overflow: hidden; height: 230px;">
+            <img src="images/kitchen.png" alt="Kitchen preparation" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Tablet Footer -->
     <footer class="tablet-footer">
-      <div>© 2026 TiffinFlow Technologies Pvt Ltd.</div>
+      <div>© 2026 TiffinFlow Technologies Pvt Ltd. All rights reserved.</div>
       <div style="display: flex; gap: 16px;">
         <a href="weekly-menu.html">Menu</a>
+        <a href="plans.html">Plans</a>
         <a href="reviews.html">Reviews</a>
-        <a href="subscription.html">My Subscription</a>
+        <a href="login.html">Sign In</a>
       </div>
     </footer>
   </div>

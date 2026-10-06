@@ -3,85 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Subscription - TiffinFlow Tablet</title>
+  <title>Sign Up - TiffinFlow Tablet</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .sub-dash-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 24px;
-      align-items: flex-start;
-    }
-    .hero-stat-card {
-      background: linear-gradient(135deg, #17352D 0%, #0F231D 100%);
-      color: var(--white);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-card);
-    }
-    .stats-trio {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      text-align: center;
-    }
-    .action-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .act-btn {
-      background: var(--white);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 12px 6px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--primary-green);
-      transition: all 0.2s;
-      text-decoration: none;
-    }
-    .act-btn:hover {
-      border-color: var(--accent-orange);
-      transform: translateY(-2px);
-    }
-    .act-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: var(--bg-cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-orange);
-    }
-    .upcoming-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 14px;
-      background: var(--white);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      margin-bottom: 10px;
-    }
-    .upcoming-thumb {
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-  </style>
 </head>
 <body>
   <div class="tablet-container">
@@ -97,187 +20,96 @@
         <span>Tiffin<span class="accent-flow">Flow</span></span>
       </a>
 
-      <nav class="tablet-nav-links">
-        <a href="index.html" class="tablet-nav-link">Home</a>
-        <a href="weekly-menu.html" class="tablet-nav-link">Menu</a>
-        <a href="plans.html" class="tablet-nav-link">Plans</a>
-        <a href="subscription.html" class="tablet-nav-link active">My Subscription</a>
-        <a href="reviews.html" class="tablet-nav-link">Reviews</a>
-      </nav>
-
-      <a href="build-week.html" class="btn btn-sm btn-primary">Open Meal Planner →</a>
+      <div style="font-size: 13px; color: var(--text-muted);">
+        Already have an account? <a href="login.html" style="color: var(--accent-orange-dark); font-weight: 700;">Log In</a>
+      </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content: Split Layout -->
     <main class="tablet-content">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
-        <div>
-          <span class="eyebrow">YOUR TIFFINFLOW</span>
-          <h1 class="page-title" style="margin-bottom: 0;">My Subscription</h1>
-          <p class="page-subtitle" style="margin-bottom: 0; margin-top: 4px;">Manage your meals, schedule and subscription in one place.</p>
-        </div>
-        <span class="badge badge-green" style="font-size: 12px; padding: 6px 14px;">Renews November 6, 2026</span>
-      </div>
+      <div class="tablet-split-layout">
+        <!-- Left Side: Informational Panel -->
+        <div class="tablet-info-panel">
+          <div>
+            <span class="eyebrow" style="color: #F8B087;">JOIN TIFFINFLOW</span>
+            <h2 style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; margin: 10px 0 14px; line-height: 1.25;">
+              Tell us about your meal routine
+            </h2>
+            <p style="font-size: 14px; opacity: 0.88; line-height: 1.6;">
+              Setting your preferences ensures your home cook crafts the right portion, spice level, and dietary profile every day.
+            </p>
+          </div>
 
-      <!-- Dashboard Two-Column Grid -->
-      <div class="sub-dash-grid">
-        <!-- Left Column: Plan Health & Calendar -->
-        <div>
-          <!-- Plan Hero Card -->
-          <div class="hero-stat-card">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 700;">Standard Flex Plan</h3>
-              <span style="font-size: 18px; opacity: 0.7;">•••</span>
+          <div style="margin: 24px 0;">
+            <div style="background: rgba(255, 255, 255, 0.08); padding: 14px 18px; border-radius: 14px; margin-bottom: 12px;">
+              <strong style="color: #F8B087; font-size: 13px;">🥗 100% Custom Diets</strong>
+              <p style="font-size: 12px; opacity: 0.85; margin-top: 4px;">Separate dedicated cooking stations for pure Vegetarian and Jain preparations.</p>
             </div>
 
-            <div style="margin-top: 14px;">
-              <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 6px;">
-                <span>12 of 15 meals remaining</span>
-                <span>80%</span>
-              </div>
-              <div style="width: 100%; height: 7px; background: rgba(255, 255, 255, 0.2); border-radius: 999px; overflow: hidden;">
-                <div style="width: 80%; height: 100%; background: var(--accent-orange); border-radius: 999px;"></div>
-              </div>
-            </div>
-
-            <div class="stats-trio">
-              <div>
-                <div style="font-family: var(--font-heading); font-size: 24px; font-weight: 800;">3</div>
-                <div style="font-size: 11px; color: #A4ADA6; margin-top: 2px;">Delivered</div>
-              </div>
-              <div>
-                <div style="font-family: var(--font-heading); font-size: 24px; font-weight: 800; color: #F8B087;">12</div>
-                <div style="font-size: 11px; color: #A4ADA6; margin-top: 2px;">Remaining</div>
-              </div>
-              <div>
-                <div style="font-family: var(--font-heading); font-size: 24px; font-weight: 800;">0</div>
-                <div style="font-size: 11px; color: #A4ADA6; margin-top: 2px;">Skipped</div>
-              </div>
+            <div style="background: rgba(255, 255, 255, 0.08); padding: 14px 18px; border-radius: 14px;">
+              <strong style="color: #F8B087; font-size: 13px;">🛡️ Guaranteed Freshness</strong>
+              <p style="font-size: 12px; opacity: 0.85; margin-top: 4px;">Packed straight from the stove into thermal insulated steel containers.</p>
             </div>
           </div>
 
-          <!-- Quick Actions Grid -->
-          <div class="action-grid-4">
-            <a href="build-week.html" class="act-btn">
-              <div class="act-icon">⏭️</div>
-              <span>Skip Meal</span>
-            </a>
-            <a href="javascript:void(0)" data-open-modal="pauseModal" class="act-btn">
-              <div class="act-icon">⏸️</div>
-              <span>Pause Plan</span>
-            </a>
-            <a href="weekly-menu.html" class="act-btn">
-              <div class="act-icon">🔄</div>
-              <span>Swap Dish</span>
-            </a>
-            <a href="plans.html" class="act-btn">
-              <div class="act-icon">➕</div>
-              <span>Extend Plan</span>
-            </a>
-          </div>
-
-          <!-- Active Day Schedule Card -->
-          <div class="card" style="border-left: 4px solid var(--accent-orange); padding: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-              <div>
-                <span class="eyebrow">TODAY · OCT 10 · LUNCH</span>
-                <h4 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: var(--primary-green);">Paneer Tikka Thali</h4>
-                <p style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Arrives 12:30–1:00 PM • Prepared by Chef Suman Kitchen</p>
-              </div>
-              <span class="badge badge-green">Out for Delivery</span>
-            </div>
-
-            <div style="display: flex; gap: 10px; margin-top: 14px; border-top: 1px solid var(--border-light); padding-top: 14px;">
-              <a href="build-week.html" class="btn btn-sm btn-secondary" style="flex: 1;">Skip Today</a>
-              <a href="weekly-menu.html" class="btn btn-sm btn-secondary" style="flex: 1;">Change Dish</a>
-              <a href="build-week.html" class="btn btn-sm btn-primary" style="flex: 1.2;">Plan Next Week</a>
-            </div>
+          <div style="font-size: 12px; opacity: 0.75; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 16px;">
+            No lock-ins. Pause, skip, or cancel whenever you need.
           </div>
         </div>
 
-        <!-- Right Column: Timeline & Payment -->
-        <div>
-          <!-- Upcoming Meals List -->
-          <div class="card" style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-              <h3 class="section-title" style="font-size: 16px; margin-bottom: 0;">Upcoming Schedule</h3>
-              <a href="build-week.html" style="font-size: 12px; font-weight: 700; color: var(--accent-orange);">Edit &rarr;</a>
-            </div>
-
-            <div class="upcoming-row">
-              <img src="images/paneer-tikka.png" alt="Paneer Tikka Thali" class="upcoming-thumb">
-              <div style="flex: 1;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <span class="eyebrow" style="margin-bottom: 0;">OCT 10 · LUNCH</span>
-                  <span class="badge badge-green" style="font-size: 9px;">TODAY</span>
-                </div>
-                <strong style="font-size: 13px; color: var(--primary-green);">Paneer Tikka Thali</strong>
-              </div>
-            </div>
-
-            <div class="upcoming-row">
-              <img src="images/rajma-rice.png" alt="Rajma Rice" class="upcoming-thumb">
-              <div style="flex: 1;">
-                <span class="eyebrow" style="margin-bottom: 0;">OCT 11 · LUNCH</span>
-                <strong style="font-size: 13px; color: var(--primary-green);">Rajma Rice</strong>
-              </div>
-            </div>
-
-            <div class="upcoming-row">
-              <img src="images/gujarati-thali.png" alt="Gujarati Special Thali" class="upcoming-thumb">
-              <div style="flex: 1;">
-                <span class="eyebrow" style="margin-bottom: 0;">OCT 12 · LUNCH</span>
-                <strong style="font-size: 13px; color: var(--primary-green);">Gujarati Special Thali</strong>
-              </div>
-            </div>
-
-            <div class="upcoming-row">
-              <img src="images/dal-tadka.png" alt="Dal Tadka Thali" class="upcoming-thumb">
-              <div style="flex: 1;">
-                <span class="eyebrow" style="margin-bottom: 0;">OCT 13 · LUNCH</span>
-                <strong style="font-size: 13px; color: var(--primary-green);">Dal Tadka Thali</strong>
-              </div>
-            </div>
+        <!-- Right Side: Account Form -->
+        <div class="tablet-form-panel">
+          <div style="margin-bottom: 20px;">
+            <h1 class="page-title" style="font-size: 26px;">Create your account</h1>
+            <p class="page-subtitle" style="margin-bottom: 0;">Let's make your meals fit your life.</p>
           </div>
 
-          <!-- Payment History Summary -->
-          <div class="card" style="margin-bottom: 0;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <div>
-                <span style="font-size: 11px; font-weight: 700; color: var(--text-muted);">OCT 5, 2026</span>
-                <div style="font-size: 13px; font-weight: 700; color: var(--primary-green); margin-top: 2px;">UPI · FreshBox Kitchens</div>
-              </div>
-              <div style="text-align: right;">
-                <strong style="font-size: 15px; color: var(--primary-green);">₹1,184</strong>
-                <span class="badge badge-paid" style="display: block; margin-top: 2px;">PAID</span>
+          <form action="plans.html" method="get">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="input-box" placeholder="Your full name" required value="Prakhar Saxena">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="input-box" placeholder="you@email.com" required value="prakhar@tiffingroup.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="input-box" placeholder="+91 98765 43210" required value="+91 98765 43210">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" class="input-box" placeholder="Create a password" required value="••••••••••••">
+            </div>
+
+            <!-- Food Preference Chips -->
+            <div class="form-group">
+              <label class="form-label">Food Preference</label>
+              <div class="chip-group">
+                <button type="button" class="chip-btn active veg">Veg (Pure)</button>
+                <button type="button" class="chip-btn nonveg">Non-Veg</button>
+                <button type="button" class="chip-btn jain">Jain</button>
               </div>
             </div>
-            <div style="display: flex; gap: 14px; margin-top: 12px; border-top: 1px solid var(--border-light); padding-top: 10px;">
-              <a href="javascript:window.print()" style="font-size: 12px; font-weight: 700; color: var(--primary-green);">Download Invoice</a>
-              <a href="reviews.html" style="font-size: 12px; font-weight: 700; color: var(--accent-orange);">Community Reviews</a>
+
+            <!-- Meal Slot Chips -->
+            <div class="form-group">
+              <label class="form-label">Meal Slot</label>
+              <div class="chip-group">
+                <button type="button" class="chip-btn active">Lunch</button>
+                <button type="button" class="chip-btn">Dinner</button>
+                <button type="button" class="chip-btn">Both</button>
+              </div>
             </div>
-          </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Create Account & Choose Plan</button>
+          </form>
         </div>
       </div>
     </main>
-
-    <!-- Pause Plan Modal -->
-    <div class="tablet-modal-overlay" id="pauseModal">
-      <div class="tablet-modal-box">
-        <h3 class="section-title" style="margin-bottom: 8px;">Pause Subscription</h3>
-        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 18px;">
-          Taking a vacation or traveling? You can pause your deliveries for up to 30 days without forfeiting your meals or container deposit.
-        </p>
-        <div class="form-group">
-          <label class="form-label">Resume Date</label>
-          <input type="date" class="input-box" value="2026-10-20">
-        </div>
-        <div style="display: flex; gap: 10px; margin-top: 20px;">
-          <button type="button" class="btn btn-secondary" data-close-modal style="flex: 1;">Cancel</button>
-          <button type="button" class="btn btn-primary" data-close-modal style="flex: 1.2;">Confirm Pause</button>
-        </div>
-      </div>
-    </div>
   </div>
   <script src="app.js"></script>
 </body>

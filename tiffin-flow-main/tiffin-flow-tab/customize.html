@@ -3,65 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customize Plan - TiffinFlow Tablet</title>
+  <title>Payment Successful - TiffinFlow Tablet</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .customize-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: flex-start;
+    .confirm-box {
+      background: var(--white);
+      border: 1.5px solid var(--border-color);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      max-width: 680px;
+      margin: 20px auto;
     }
-    .stepper-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .step-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-    .step-item.active {
-      color: var(--accent-orange-dark);
-    }
-    .step-circle {
-      width: 26px;
-      height: 26px;
+    .check-ring {
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
-      background: var(--border-color);
-      display: flex;
+      background: #E8F3EB;
+      border: 6px solid #CDE6D5;
+      color: #2F7057;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
-      color: var(--text-muted);
+      margin-bottom: 20px;
     }
-    .step-item.active .step-circle {
-      background: var(--accent-orange);
-      color: var(--white);
-    }
-    .step-item.completed .step-circle {
-      background: var(--primary-green);
-      color: var(--white);
-    }
-    .select-card {
-      border: 1.5px solid var(--border-color);
-      border-radius: 14px;
-      padding: 14px 18px;
-      background: var(--white);
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .select-card:hover, .select-card.selected {
-      border-color: var(--accent-orange);
+    .meta-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background: var(--bg-cream-warm);
+      border-radius: 16px;
+      padding: 16px;
+      margin: 24px 0;
+      text-align: left;
     }
   </style>
 </head>
@@ -69,7 +44,7 @@
   <div class="tablet-container">
     <!-- Header -->
     <header class="tablet-header">
-      <a href="plans.html" class="brand-logo">
+      <a href="index.html" class="brand-logo" style="margin: 0 auto;">
         <span class="brand-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
@@ -78,116 +53,50 @@
         </span>
         <span>Tiffin<span class="accent-flow">Flow</span></span>
       </a>
-
-      <div class="stepper-bar">
-        <div class="step-item completed">
-          <div class="step-circle">✓</div>
-          <span>Plan</span>
-        </div>
-        <span style="color: var(--border-color);">—</span>
-        <div class="step-item active">
-          <div class="step-circle">2</div>
-          <span>Customize</span>
-        </div>
-        <span style="color: var(--border-color);">—</span>
-        <div class="step-item">
-          <div class="step-circle">3</div>
-          <span>Payment</span>
-        </div>
-      </div>
-
-      <a href="plans.html" class="btn btn-sm btn-secondary">Back</a>
     </header>
 
     <!-- Main Content -->
-    <main class="tablet-content">
-      <div style="margin-bottom: 24px;">
-        <span class="eyebrow">STEP 2 OF 3</span>
-        <h1 class="page-title">Make it yours</h1>
-        <p class="page-subtitle" style="margin-bottom: 0;">Customize your meal plan around your daily routine.</p>
-      </div>
+    <main class="tablet-content" style="display: flex; align-items: center; justify-content: center;">
+      <div class="confirm-box">
+        <div class="check-ring">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
 
-      <div class="customize-grid">
-        <!-- Left: Configuration Options -->
-        <div>
-          <!-- Diet Preference -->
-          <div class="card" style="margin-bottom: 18px;">
-            <label class="form-label" style="margin-bottom: 10px;">Dietary Preference</label>
-            <div class="chip-group">
-              <button type="button" class="chip-btn active veg">Veg (Pure)</button>
-              <button type="button" class="chip-btn nonveg">Non-Veg</button>
-              <button type="button" class="chip-btn jain">Jain</button>
-            </div>
-            <p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
-              Cooked with 100% segregated utensils and dedicated prep counters.
-            </p>
+        <span class="eyebrow">PAYMENT SUCCESSFUL</span>
+        <h1 class="page-title" style="font-size: 32px; margin-bottom: 6px;">You're all set!</h1>
+        <p class="page-subtitle" style="margin-bottom: 0;">Your TiffinFlow subscription is active and confirmed.</p>
+
+        <div class="meta-metrics">
+          <div>
+            <span style="font-size: 10px; font-weight: 800; color: var(--text-muted);">PLAN</span>
+            <strong style="display: block; font-size: 14px; color: var(--primary-green);">Standard Flex</strong>
           </div>
-
-          <!-- Meal Slot -->
-          <div class="card" style="margin-bottom: 18px;">
-            <label class="form-label" style="margin-bottom: 10px;">Preferred Delivery Slot</label>
-            <div class="chip-group" style="margin-bottom: 12px;">
-              <button type="button" class="chip-btn active">Lunch Only</button>
-              <button type="button" class="chip-btn">Dinner Only</button>
-              <button type="button" class="chip-btn">Lunch & Dinner</button>
-            </div>
-
-            <label class="select-card selected">
-              <div>
-                <strong style="color: var(--primary-green); font-size: 14px;">12:30 PM – 1:30 PM</strong>
-                <div style="font-size: 12px; color: var(--text-muted);">Standard Afternoon Lunch</div>
-              </div>
-              <span class="badge badge-green">Recommended</span>
-            </label>
-
-            <label class="select-card">
-              <div>
-                <strong style="color: var(--primary-green); font-size: 14px;">1:30 PM – 2:30 PM</strong>
-                <div style="font-size: 12px; color: var(--text-muted);">Late Lunch Window</div>
-              </div>
-            </label>
+          <div>
+            <span style="font-size: 10px; font-weight: 800; color: var(--text-muted);">TOTAL MEALS</span>
+            <strong style="display: block; font-size: 14px; color: var(--primary-green);">15 Meals</strong>
           </div>
-
-          <!-- Reusable Bag Deposit -->
-          <div class="card card-warm" style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 0;">
-            <input type="checkbox" id="bag-cb" checked style="accent-color: var(--accent-orange); width: 18px; height: 18px; margin-top: 2px;">
-            <div>
-              <strong style="color: var(--primary-green); font-size: 14px; display: block;">Stainless-Steel Tiffin Security Deposit</strong>
-              <p style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
-                ₹150 one-time refundable deposit. 100% returned to your account if you pause or end your subscription.
-              </p>
-            </div>
+          <div>
+            <span style="font-size: 10px; font-weight: 800; color: var(--text-muted);">START DATE</span>
+            <strong style="display: block; font-size: 14px; color: var(--primary-green);">Oct 7, 2026</strong>
+          </div>
+          <div>
+            <span style="font-size: 10px; font-weight: 800; color: var(--text-muted);">STATUS</span>
+            <span class="badge badge-paid" style="margin-top: 3px;">PAID · ₹1,184</span>
           </div>
         </div>
 
-        <!-- Right: Live Plan Order Summary Card -->
-        <div class="card" style="border: 2px solid var(--accent-orange-soft); position: sticky; top: 100px;">
-          <span class="eyebrow">ORDER SUMMARY</span>
-          <h3 style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--primary-green); margin-bottom: 4px;">
-            Standard Flex Plan
-          </h3>
-          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">15 meals · Vegetarian</p>
+        <div class="card card-forest" style="text-align: left; padding: 20px; margin-bottom: 24px;">
+          <h4 style="font-family: var(--font-heading); font-size: 15px; font-weight: 800; margin-bottom: 4px;">Reusable Stainless-Steel Tiffins</h4>
+          <p style="font-size: 12px; opacity: 0.9; line-height: 1.5;">
+            Your first meal arrives packed fresh in our insulated steel box. Simply place the empty tiffin outside before your next delivery for zero-hassle swap!
+          </p>
+        </div>
 
-          <div style="border-top: 1px solid var(--border-light); padding-top: 14px; margin-bottom: 16px;">
-            <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
-              <span style="color: var(--text-muted);">Meal Plan Cost</span>
-              <strong>₹1,149</strong>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
-              <span style="color: var(--text-muted);">Tiffin Container Deposit</span>
-              <strong>₹150</strong>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
-              <span style="color: var(--text-muted);">Doorstep Delivery</span>
-              <strong style="color: var(--success-green);">FREE</strong>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 800; color: var(--primary-green); border-top: 1px dashed var(--border-color); padding-top: 12px; margin-top: 10px;">
-              <span>Total Payable</span>
-              <span style="color: var(--accent-orange-dark);">₹1,299</span>
-            </div>
-          </div>
-
-          <a href="checkout.html" class="btn btn-primary" style="width: 100%;">Continue to Payment &rarr;</a>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <a href="subscription.html" class="btn btn-primary" style="width: auto;">Go to Subscription Dashboard</a>
+          <a href="build-week.html" class="btn btn-secondary" style="width: auto;">Open Smart Meal Planner</a>
         </div>
       </div>
     </main>
